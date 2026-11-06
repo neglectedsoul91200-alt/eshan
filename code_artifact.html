@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="bn" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>নারী স্বাস্থ্য ও সচেতনতা | Women's Intimate Health & Medical Guide</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Hind Siliguri for Bengali typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Hind Siliguri', 'sans-serif'],
+                    },
+                    colors: {
+                        rose: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                        },
+                        teal: {
+                            50: '#f0fdfa',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            background-color: #fcf8f9;
+        }
+        .modal-active {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-rose-200 selection:text-rose-900">
+
+    <!-- Top Medical Disclaimer Banner -->
+    <div class="bg-rose-700 text-white text-xs sm:text-sm py-2.5 px-4 text-center font-medium shadow-inner">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-yellow-300 text-base"></i>
+            <span><strong>জরুরি সতর্কবার্তা:</strong> এই ওয়েবসাইটের তথ্যসমূহ কেবল স্বাস্থ্য সচেতনতা ও শিক্ষামূলক উদ্দেশ্যে প্রস্তুতকৃত। এটি কোনো পেশাদার চিকিৎসকের বিকল্প নয়। যেকোনো স্বাস্থ্য সমস্যায় অভিজ্ঞ ডাক্তারের পরামর্শ নিন।</span>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-rose-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-rose-500 to-teal-500 flex items-center justify-center text-white text-2xl shadow-md">
+                        <i class="fa-solid fa-ribbon"></i>
+                    </div>
+                    <div>
+                        <a href="#" class="text-2xl font-bold text-gray-900 tracking-tight flex items-center gap-2">
+                            নারী স্বাস্থ্য নির্দেশিকা
+                        </a>
+                        <p class="text-xs text-teal-700 font-semibold tracking-wider uppercase">Women's Medical Guide</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center gap-8 font-semibold text-gray-700">
+                    <a href="#breast-health" class="hover:text-rose-600 transition flex items-center gap-1.5"><i class="fa-solid fa-person-breastfeeding text-rose-500"></i> স্তনের স্বাস্থ্য</a>
+                    <a href="#vaginal-health" class="hover:text-teal-600 transition flex items-center gap-1.5"><i class="fa-solid fa-notes-medical text-teal-600"></i> যোনির স্বাস্থ্য</a>
+                    <a href="#bse-guide" class="hover:text-rose-600 transition flex items-center gap-1.5"><i class="fa-solid fa-hand-holding-medical text-rose-500"></i> স্ব-পরীক্ষা পদ্ধতি</a>
+                    <a href="#prevention" class="hover:text-teal-600 transition flex items-center gap-1.5"><i class="fa-solid fa-shield-heart text-teal-600"></i> স্বাস্থ্য সচেতনতা</a>
+                    <a href="#faq" class="hover:text-gray-900 transition">প্রশ্নোত্তর</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="p-2.5 rounded-xl text-gray-600 hover:text-rose-600 hover:bg-rose-50 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-rose-100 px-4 pt-2 pb-6 space-y-3 font-semibold text-gray-700">
+            <a href="#breast-health" class="mobile-link block px-3 py-2 rounded-lg hover:bg-rose-50 hover:text-rose-600"><i class="fa-solid fa-person-breastfeeding mr-2 text-rose-500"></i> স্তনের রোগ ও স্বাস্থ্য</a>
+            <a href="#vaginal-health" class="mobile-link block px-3 py-2 rounded-lg hover:bg-teal-50 hover:text-teal-600"><i class="fa-solid fa-notes-medical mr-2 text-teal-600"></i> যোনি ও ভলভার সংক্রমণ</a>
+            <a href="#bse-guide" class="mobile-link block px-3 py-2 rounded-lg hover:bg-rose-50 hover:text-rose-600"><i class="fa-solid fa-hand-holding-medical mr-2 text-rose-500"></i> নিজে স্তন পরীক্ষা (BSE)</a>
+            <a href="#prevention" class="mobile-link block px-3 py-2 rounded-lg hover:bg-teal-50 hover:text-teal-600"><i class="fa-solid fa-shield-heart mr-2 text-teal-600"></i> স্বাস্থ্য সচেতনতা ও পরিচ্ছন্নতা</a>
+            <a href="#faq" class="mobile-link block px-3 py-2 rounded-lg hover:bg-gray-50"><i class="fa-solid fa-circle-question mr-2 text-gray-500"></i> সাধারণ প্রশ্নাবলি</a>
+        </div>
+    </header>
+
+    <!-- Hero Section with Search -->
+    <section class="relative bg-gradient-to-b from-rose-100/60 via-teal-50/30 to-fuchsia-50/20 py-16 md:py-24 px-4 overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-rose-100 text-rose-700 text-sm font-semibold mb-4 border border-rose-200">
+                <i class="fa-solid fa-heart-pulse mr-1"></i> গোপন নয়, সঠিক সচেতনতাই সুস্থতার চাবিকাঠি
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
+                নারী দেহের সংবেদনশীল অঙ্গসমূহের <br class="hidden sm:inline">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-teal-700">মেডিকেল গাইড ও স্বাস্থ্য নিরাপত্তা</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                স্তনের বিভিন্ন সমস্যা, যোনির সংক্রমণ, প্রদাহ, লক্ষণ, সঠিক কারণ এবং প্রতিরোধের উপায় সম্পর্কে জানুন নির্দ্বিধায় ও বৈজ্ঞানিক তথ্যের ভিত্তিতে।
+            </p>
+
+            <!-- Search Bar Component -->
+            <div class="max-w-2xl mx-auto relative shadow-lg rounded-2xl bg-white p-2 border border-rose-200">
+                <div class="flex items-center">
+                    <i class="fa-solid fa-magnifying-glass text-gray-400 text-xl pl-4 pr-2"></i>
+                    <input type="text" id="disease-search" placeholder="রোগের নাম (যেমন: ক্যান্ডিডায়াসিস, স্তন সিস্ট, Mastitis) বা লক্ষণ খুঁজুন..." 
+                           class="w-full py-3 px-2 text-gray-700 bg-transparent text-base focus:outline-none">
+                    <button class="bg-rose-600 hover:bg-rose-700 text-white font-semibold px-6 py-3 rounded-xl transition shadow-md">
+                        খুঁজুন
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Quick Filter Tags -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mt-4 text-sm text-gray-600">
+                <span class="font-semibold text-gray-500">জনপ্রিয় সার্চ:</span>
+                <button onclick="filterSearch('ইস্ট ইনফেকশন')" class="px-3 py-1 bg-white hover:bg-rose-50 border border-gray-200 rounded-lg text-rose-700 transition">ইস্ট ইনফেকশন</button>
+                <button onclick="filterSearch('ফাইব্রোএডিনোমা')" class="px-3 py-1 bg-white hover:bg-rose-50 border border-gray-200 rounded-lg text-rose-700 transition">ফাইব্রোএডিনোমা</button>
+                <button onclick="filterSearch('স্তন ক্যান্সার')" class="px-3 py-1 bg-white hover:bg-rose-50 border border-gray-200 rounded-lg text-rose-700 transition">স্তন ক্যান্সার</button>
+                <button onclick="filterSearch('PID')" class="px-3 py-1 bg-white hover:bg-teal-50 border border-gray-200 rounded-lg text-teal-700 transition">PID</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- SECTION 1: Breast Health Guide -->
+        <section id="breast-health" class="scroll-mt-24">
+            <div class="border-l-4 border-rose-600 pl-4 mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">স্তনের রোগ ও স্বাস্থ্যবিধি</h2>
+                <p class="text-gray-600 mt-1">Breast Conditions, Tumors, Infections & Abnormalities</p>
+            </div>
+
+            <!-- SVG Diagram Feature: Breast Anatomy & Self Check -->
+            <div class="bg-gradient-to-r from-rose-50 to-white rounded-3xl p-6 sm:p-8 mb-10 border border-rose-100 shadow-sm">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="text-rose-600 font-bold text-xs uppercase tracking-wider bg-rose-100 px-3 py-1 rounded-full">ভিজ্যুয়াল চিত্র ও গঠন</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-3 mb-4">স্বাভাবিক স্তনের অভ্যন্তরীণ গঠন</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            স্তন প্রধানত চর্বি (Fatty Tissue), দুগ্ধ উৎপাদনকারী গ্রন্থি (Lobules), এবং দুধ বহনের নালী (Ducts) দিয়ে গঠিত। স্তনে অস্বাভাবিক কোনো চাকা, ব্যথা বা নিপলের পরিবর্তন দেখা দিলে তা দ্রুত শনাক্ত করা জরুরি।
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-rose-500"></i> লবিউলস (Lobules): দুধ তৈরি করে</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-rose-500"></i> ডাক্টস (Ducts): দুধ পরিবহন করে নিপলে পাঠায়</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-rose-500"></i> ফাইব্রাস টিস্যু ও চর্বি: স্তনের আকার ও গঠন দেয়</li>
+                        </ul>
+                    </div>
+                    <!-- Vector SVG Illustration: Breast Structure -->
+                    <div class="flex justify-center bg-white p-6 rounded-2xl border border-rose-100 shadow-sm">
+                        <svg viewBox="0 0 400 300" class="w-full max-w-sm h-auto">
+                            <!-- Background Shape -->
+                            <path d="M 50 150 C 50 50, 200 50, 320 150 C 320 250, 150 260, 50 150 Z" fill="#ffe4e6" stroke="#f43f5e" stroke-width="2"/>
+                            <!-- Muscle Layer -->
+                            <path d="M 60 70 Q 80 150 60 230" fill="none" stroke="#be123c" stroke-width="12" stroke-linecap="round"/>
+                            <text x="35" y="150" font-size="10" fill="#be123c" font-weight="bold">পেশি (Muscle)</text>
+                            <!-- Fat Tissues -->
+                            <circle cx="150" cy="110" r="25" fill="#fef08a" opacity="0.7"/>
+                            <circle cx="210" cy="130" r="30" fill="#fef08a" opacity="0.7"/>
+                            <circle cx="160" cy="190" r="28" fill="#fef08a" opacity="0.7"/>
+                            <!-- Lobules / Glands -->
+                            <g fill="#f43f5e" opacity="0.8">
+                                <circle cx="180" cy="100" r="12"/>
+                                <circle cx="220" cy="170" r="15"/>
+                                <circle cx="190" cy="210" r="11"/>
+                            </g>
+                            <!-- Milk Ducts -->
+                            <path d="M 180 100 Q 250 140 290 150 M 220 170 Q 260 160 290 150 M 190 210 Q 250 170 290 150" fill="none" stroke="#0d9488" stroke-width="3"/>
+                            <!-- Areola & Nipple -->
+                            <circle cx="310" cy="150" r="18" fill="#fb7185"/>
+                            <circle cx="322" cy="150" r="7" fill="#e11d48"/>
+                            
+                            <!-- Annotations -->
+                            <line x1="220" y1="90" x2="260" y2="60" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="3,3"/>
+                            <text x="265" y="60" font-size="12" fill="#1f2937">লোবিউল (গ্রন্থি)</text>
+                            
+                            <line x1="250" y1="140" x2="280" y2="90" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="3,3"/>
+                            <text x="285" y="90" font-size="12" fill="#0f766e">দুগ্ধ নালী (Duct)</text>
+
+                            <line x1="322" y1="150" x2="350" y2="190" stroke="#4b5563" stroke-width="1.5" stroke-dasharray="3,3"/>
+                            <text x="320" y="210" font-size="12" fill="#be123c">নিপল (Nipple)</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disease Cards Grid (Breast) -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="breast-cards-container">
+
+                <!-- Disease 1: Fibroadenoma -->
+                <div class="disease-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col justify-between" data-keywords="ফাইব্রোএডিনোমা fibroadenoma টির টিউমার breast lump">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full border border-teal-200">বাইনাইন / ক্ষতিকর নয়</span>
+                            <i class="fa-solid fa-ribbon text-rose-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">ফাইব্রোএডিনোমা</h3>
+                        <p class="text-xs text-rose-600 font-semibold mb-4">Fibroadenoma of Breast</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>বিবরণ ও লক্ষণ:</strong> স্তনে সাধারণত ব্যথাহীন, গোলাকার, শক্ত কিন্তু আঙুল দিয়ে চাপ দিলে স্থান পরিবর্তন করে (যা 'Breast Mouse' নামেও পরিচিত)। এটি ক্যান্সার নয়।</p>
+                            <p><strong>কারণ:</strong> ইস্ট্রোজেন হরমোনের তারতম্যের কারণে ১৫-৩৫ বছর বয়সী নারীদের ক্ষেত্রে এটি বেশি দেখা যায়।</p>
+                            <p><strong>প্রতিরোধ ও চিকিৎসা:</strong> জীবনযাত্রায় পরিমিত খাদ্যভ্যাস। ছোট ফাইব্রোএডিনোমা হলে চিকিৎসকের পর্যবেক্ষণে রাখলেই চলে। প্রয়োজনে ম্যামোগ্রাম বা বায়োপসি ও অস্ত্রোপচার করে অপসারণ করা যায়।</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-rose-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                        <span class="text-xs font-bold text-rose-700 flex items-center gap-1">
+                            <i class="fa-solid fa-user-doctor"></i> কখন ডাক্তার দেখাবেন: চাকার আকার দ্রুত বড় হলে বা স্তনের ত্বকে পরিবর্তন আসলে।
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Disease 2: Mastitis -->
+                <div class="disease-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col justify-between" data-keywords="ম্যাস্টাইটিস স্তনপ্রদাহ mastitis breast infection স্তনে ব্যথা জ্বর">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-orange-50 text-orange-700 text-xs font-bold rounded-full border border-orange-200">সংক্রমণ ও প্রদাহ</span>
+                            <i class="fa-solid fa-bacteria text-orange-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">ম্যাস্টাইটিস (স্তনপ্রদাহ)</h3>
+                        <p class="text-xs text-rose-600 font-semibold mb-4">Mastitis (Breast Inflammation)</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>বিবরণ ও লক্ষণ:</strong> স্তনে প্রচণ্ড ব্যথা, লাল হয়ে ফুলে যাওয়া, ত্বক গরম অনুভব হওয়া এবং সাথে জ্বর বা কাঁপুনি থাকা। স্তন্যদানকারী মায়েদের মধ্যে এটি সবচেয়ে বেশি দেখা যায়।</p>
+                            <p><strong>কারণ:</strong> দুগ্ধনালী বন্ধ হয়ে যাওয়া বা নিপলের ফেটে যাওয়া ত্বক দিয়ে ব্যাকটেরিয়া (যেমন Staph) ভেতরে প্রবেশ করা।</p>
+                            <p><strong>প্রতিরোধ ও চিকিৎসা:</strong> শিশুটিকে সঠিকভাবে দুধ খাওয়ান যেন স্তন খালি হয়। হালকা গরম সেঁক দিন। ডাক্তারের পরামর্শ অনুযায়ী অ্যান্টিবায়োটিক গ্রহণ করতে হয়।</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-rose-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                        <span class="text-xs font-bold text-rose-700 flex items-center gap-1">
+                            <i class="fa-solid fa-user-doctor"></i> কখন ডাক্তার দেখাবেন: অ্যান্টিবায়োটিক সত্ত্বেও ২ দিনে উন্নতি না হলে বা পুঁজ জমলে (Abscess)।
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Disease 3: Breast Cyst -->
+                <div class="disease-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col justify-between" data-keywords="স্তন সিস্ট breast cyst তরল ভর্তি থলি">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full border border-teal-200">তরল ভর্তি থলি</span>
+                            <i class="fa-solid fa-droplet text-teal-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">স্তন সিস্ট</h3>
+                        <p class="text-xs text-rose-600 font-semibold mb-4">Breast Cyst (Fluid-filled Sac)</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>বিবরণ ও লক্ষণ:</strong> স্তনে নরম, তরলপূর্ণ থলি। এটি আঙুল দিয়ে চাপ দিলে কিছুটা নরম বা আঙ্গুরের মতো অনুভব হতে পারে। পিরিয়ডের আগে এতে ব্যথা বা আকার বড় হতে পারে।</p>
+                            <p><strong>কারণ:</strong> হরমোনজনিত পরিবর্তনের কারণে স্তনের গ্ল্যান্ডে তরল জমা হওয়া। সাধারণত ৩৫-৫০ বছর বয়সী নারীদের বেশি হয়।</p>
+                            <p><strong>প্রতিরোধ ও চিকিৎসা:</strong> ক্যাফেইন (চা/কফি) কম খাওয়া ও ভালো সাপোর্ট প্রদানকারী ব্রা পরা। সাধারণ সিস্টের চিকিৎসার প্রয়োজন হয় না, তবে বড় সিস্টে সূঁচের সাহায্যে তরল বের (Aspiration) করা হয়।</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-rose-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                        <span class="text-xs font-bold text-rose-700 flex items-center gap-1">
+                            <i class="fa-solid fa-user-doctor"></i> কখন ডাক্তার দেখাবেন: সিস্ট খুব ব্যথাদায়ক হলে বা এতে রক্তমিশ্রিত তরল পাওয়া গেলে।
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Disease 4: Breast Cancer -->
+                <div class="disease-card bg-white rounded-2xl p-6 shadow-sm border border-rose-200 hover:shadow-md transition flex flex-col justify-between" data-keywords="স্তন ক্যান্সার breast cancer কার্সিনোমা স্তনে শক্ত চাকা নিপল ভেতরে ঢুকে যাওয়া">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-rose-100 text-rose-700 text-xs font-bold rounded-full border border-rose-300">গুরুতর / ম্যালিগন্যান্ট</span>
+                            <i class="fa-solid fa-shield-virus text-rose-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">স্তন ক্যান্সার</h3>
+                        <p class="text-xs text-rose-600 font-semibold mb-4">Breast Cancer / Malignancy</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>বিবরণ ও লক্ষণ:</strong> স্তনে বা বগলে অনিয়মিত, শক্ত ও ব্যথাহীন চাকা, নিপল ভেতরের দিকে ঢুকে যাওয়া, নিপল থেকে রক্তক্ষরণ, স্তনের ত্বকে কমলার খোসার মতো গর্ত (Dimpling) দেখা দেওয়া।</p>
+                            <p><strong>কারণ:</strong> বয়সবৃদ্ধি, বংশগত ইতিহাস (BRCA1/BRCA2 জিন mutation), স্থূলতা, বিলম্বিত সন্তানধারণ, ধূমপান বা হরমোন থেরাপি।</p>
+                            <p><strong>প্রতিরোধ ও চিকিৎসা:</strong> নিয়মিত স্ব-পরীক্ষা (BSE) এবং ৪০+ বয়সে ম্যামোগ্রাম করা। প্রাথমিক অবস্থায় ধরা পড়লে সার্জারি, কেমোথেরাপি ও রেডিয়েশনে এটি পুরোপুরি নিরাময়যোগ্য।</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-rose-100/60 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                        <span class="text-xs font-bold text-rose-800 flex items-center gap-1">
+                            <i class="fa-solid fa-triangle-exclamation"></i> অবিলম্বে ডাক্তার দেখান: কোনো শক্ত চাকা বা নিপলে অস্বাভাবিক পরিবর্তন দেখতে পেলে।
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Disease 5: Nipple Discharge -->
+                <div class="disease-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col justify-between" data-keywords="নিপল ডিসচার্জ nipple discharge স্তনবৃন্ত থেকে তরল ক্ষরণ রক্তক্ষরণ intraductal papilloma">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-yellow-50 text-yellow-800 text-xs font-bold rounded-full border border-yellow-200">উপসর্গ / ক্ষরণ</span>
+                            <i class="fa-solid fa-hand-holding-droplet text-yellow-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">নিপল ডিসচার্জ (স্তনবৃন্ত থেকে ক্ষরণ)</h3>
+                        <p class="text-xs text-rose-600 font-semibold mb-4">Nipple Discharge / Galactorrhea</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>বিবরণ ও লক্ষণ:</strong> গর্ভধারণ বা স্তন্যদান ছাড়া স্তনবৃন্ত থেকে দুধের মতো, হলুদাভ, পরিষ্কার বা রক্তমিশ্রিত তরল নির্গত হওয়া।</p>
+                            <p><strong>কারণ:</strong> থাইরয়েড সমস্যা, প্রোল্যাকটিন হরমোনের আধিক্য, ডাক্ট এক্টেসিয়া (Duct Ectasia), বা ইন্ট্রাডাক্টাল প্যাপিলোমা (Intraductal Papilloma)।</p>
+                            <p><strong>প্রতিরোধ ও চিকিৎসা:</strong> স্তনবৃন্ত বারবার চাপ দেওয়া বন্ধ রাখা। ডাক্তার প্রোল্যাকটিন টেস্ট ও ম্যামোগ্রাম করে মূল কারণ অনুযায়ী ওষুধ দেন।</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-rose-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                        <span class="text-xs font-bold text-rose-700 flex items-center gap-1">
+                            <i class="fa-solid fa-user-doctor"></i> কখন ডাক্তার দেখাবেন: ক্ষরণ এক স্তন থেকে হলে বা সাথে রক্ত থাকলে।
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Interactive BSE Checklist Banner -->
+        <section id="bse-guide" class="scroll-mt-24 bg-gradient-to-r from-teal-800 to-teal-900 rounded-3xl text-white p-6 sm:p-10 shadow-xl">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="bg-teal-700 text-teal-200 text-xs font-bold px-3 py-1 rounded-full uppercase">স্ব-পরীক্ষা নির্দেশিকা</span>
+                    <span class="text-teal-300 text-sm"><i class="fa-regular fa-clock"></i> প্রতি মাসে মাত্র ১০ মিনিট</span>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-extrabold mb-4">নিজেই নিজের স্তন পরীক্ষা করুন (Breast Self-Exam - BSE)</h2>
+                <p class="text-teal-100 text-base sm:text-lg mb-8">
+                    মাসিক শেষ হওয়ার ৩-৫ দিন পর স্ব-পরীক্ষা করার উপযুক্ত সময়। নিয়মিত পরীক্ষায় স্তনের যেকোনো অস্বাভাবিক পরিবর্তন দ্রুত শনাক্ত করা সম্ভব।
+                </p>
+
+                <!-- Steps Interactive Grid -->
+                <div class="grid sm:grid-cols-3 gap-6 text-gray-800 mb-8">
+                    <div class="bg-white rounded-2xl p-5 shadow">
+                        <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 font-bold flex items-center justify-center mb-3 text-lg">১</div>
+                        <h4 class="font-bold text-gray-900 mb-2">আয়নায় পর্যবেক্ষণ</h4>
+                        <p class="text-xs text-gray-600">আয়নার সামনে সোজা হয়ে দাঁড়িয়ে স্তনের আকার, গঠন, ত্বকের রঙ বা নিপলের কোনো পরিবর্তন আছে কি না দেখুন।</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 shadow">
+                        <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 font-bold flex items-center justify-center mb-3 text-lg">২</div>
+                        <h4 class="font-bold text-gray-900 mb-2">হাত দিয়ে স্পর্শ ও চাপ</h4>
+                        <p class="text-xs text-gray-600">শুয়ে বা গোসলের সময় আঙুলের মাথা দিয়ে গোলাকারে ধীরে ধীরে স্তন ও বগলের নিচে চেপে শক্ত চাকা পরীক্ষা করুন।</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-5 shadow">
+                        <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 font-bold flex items-center justify-center mb-3 text-lg">৩</div>
+                        <h4 class="font-bold text-gray-900 mb-2">নিপল পর্যবেক্ষণ</h4>
+                        <p class="text-xs text-gray-600">হালকা চেপে দেখুন কোনো অস্বাভাবিক তরল বা রক্ত বের হচ্ছে কি না। অস্বাভাবিক মনে হলে ডাক্তারের সাথে কথা বলুন।</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Checklist Button -->
+                <div class="text-center">
+                    <button onclick="toggleChecklistModal()" class="bg-rose-500 hover:bg-rose-600 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-clipboard-check mr-2"></i> স্তন স্ব-পরীক্ষার বিষয়সূচি (Self-Check Checklist) খুলুন
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Vaginal & Vulvovaginal Health Guide -->
+        <section id="vaginal-health" class="scroll-mt-24">
+            <div class="border-l-4 border-teal-600 pl-4 mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">যোনি ও ভলভার রোগ ও সংক্রমণ</h2>
+                <p class="text-gray-600 mt-1">Vaginal Infections, Inflammatory Conditions & STIs</p>
+            </div>
+
+            <!-- SVG Visual Diagram for Vaginal Microbiome & Health -->
+            <div class="bg-gradient-to-r from-teal-50 to-white rounded-3xl p-6 sm:p-8 mb-10 border border-teal-100 shadow-sm">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="text-teal-700 font-bold text-xs uppercase tracking-wider bg-teal-100 px-3 py-1 rounded-full">মাইক্রোবায়োম ও পিএইচ (pH) ভারসাম্য</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-3 mb-4">যোনির স্বাভাবিক স্বাস্থ্য ও সুরক্ষা ব্যবস্থা</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            সুস্থ যোনিতে স্বাভাবিকভাবেই <strong>Lactobacillus</strong> নামক উপকারী ব্যাকটেরিয়া থাকে, যা যোনির পরিবেশকে অ্যাসিডিক (pH 3.8 - 4.5) রাখে। এই অ্যাসিডিক পরিবেশ ক্ষতিকর ব্যাকটেরিয়া ও ফাঙ্গাস জন্মাতে দেয় না।
+                        </p>
+                        <div class="bg-white p-4 rounded-xl border border-teal-100 text-sm text-gray-700 space-y-2">
+                            <div class="flex items-center justify-between">
+                                <span>স্বাভাবিক পিএইচ (Normal pH):</span>
+                                <span class="font-bold text-teal-700">3.8 - 4.5 (Mildly Acidic)</span>
+                            </div>
+                            <div class="w-full bg-gray-200 h-2.5 rounded-full overflow-hidden">
+                                <div class="bg-gradient-to-r from-teal-500 to-rose-400 h-2.5 w-2/5"></div>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1">সাবান বা সুগন্ধিযুক্ত কেমিক্যাল ব্যবহার করলে pH ভারসাম্য নষ্ট হয়ে সংক্রমণ ঘটে।</p>
+                        </div>
+                    </div>
+
+                    <!-- SVG Graphic Diagram -->
+                    <div class="flex justify-center bg-white p-6 rounded-2xl border border-teal-100 shadow-sm">
+                        <svg viewBox="0 0 350 250" class="w-full max-w-sm h-auto">
+                            <!-- Outer Vulva Diagram Simple Medical Stylized -->
+                            <rect x="25" y="20" width="300" height="210" rx="15" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+                            <text x="175" y="45" text-anchor="middle" font-size="14" font-weight="bold" fill="#0f766e">যোনির পিএইচ (pH) ভারসাম্য ও সুরক্ষা</text>
+                            
+                            <!-- Good Bacteria Visual -->
+                            <g transform="translate(50,70)">
+                                <circle cx="45" cy="45" r="35" fill="#ccfbf1" stroke="#0d9488" stroke-width="2"/>
+                                <path d="M 35 45 L 42 52 L 58 36" stroke="#0d9488" stroke-width="3" fill="none"/>
+                                <text x="45" y="95" text-anchor="middle" font-size="11" font-weight="bold" fill="#115e59">উপকারী ল্যাকটোব্যাসিলাস</text>
+                                <text x="45" y="110" text-anchor="middle" font-size="10" fill="#4b5563">সংক্রমণ প্রতিরোধ করে</text>
+                            </g>
+
+                            <!-- VS Bad Infection Visual -->
+                            <g transform="translate(200,70)">
+                                <circle cx="45" cy="45" r="35" fill="#ffe4e6" stroke="#f43f5e" stroke-width="2"/>
+                                <path d="M 35 35 L 55 55 M 55 35 L 35 55" stroke="#f43f5e" stroke-width="3"/>
+                                <text x="45" y="95" text-anchor="middle" font-size="11" font-weight="bold" fill="#be123c">pH ভারসাম্যের ব্যাঘাত</text>
+                                <text x="45" y="110" text-anchor="middle" font-size="10" fill="#4b5563">ইস্ট ও ব্যাকটেরিয়াল ইনফেকশন</text>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disease Cards Grid (Vaginal/Vulvar) -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="vaginal-cards-container">
+
+                <!-- Vaginal Disease 1: Yeast Infection -->
+                <div class="disease-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col justify-between" data-keywords="ইস্ট ইনফেকশন yeast infection candidiasis ক্যান্ডিডায়াসিস চুলকানি সাদা স্রাব">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-purple-50 text-purple-700 text-xs font-bold rounded-full border border-purple-200">ফাঙ্গাল সংক্রমণ</span>
+                            <i class="fa-solid fa-disease text-purple-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">ইস্ট ইনফেকশন (ক্যান্ডিডায়াসিস)</h3>
+                        <p class="text-xs text-teal-600 font-semibold mb-4">Vaginal Yeast Infection / Candidiasis</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>বিবরণ ও লক্ষণ:</strong> যোনিতে ও ভলভায় তীব্র চুলকানি, লাল হয়ে যাওয়া, ছানার (Cottage cheese) মতো সাদা পুরু দুর্গন্ধহীন স্রাব নিঃসরণ এবং প্রস্রাব বা সহবাসের সময় জ্বালাপোড়া।</p>
+                            <p><strong>কারণ:</strong> <i>Candida albicans</i> নামক ফাঙ্গাসের অনিয়ন্ত্রিত বৃদ্ধি। অ্যান্টিবায়োটিক সেবন, ডায়াবেটিস, গর্ভাবস্থা বা স্যাঁতসেঁতে অন্তর্বাস পরা।</p>
+                            <p><strong>প্রতিরোধ ও চিকিৎসা:</strong> সুতি (Cotton) অন্তর্বাস পরা, শুষ্ক রাখা। অ্যান্টিফাঙ্গাল ক্রিম বা ওভার-দ্য-কাউন্টার (Fluconazole) ওষুধ চিকিৎসকের পরামর্শে ব্যবহার করা।</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-teal-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                        <span class="text-xs font-bold text-teal-800 flex items-center gap-1">
+                            <i class="fa-solid fa-user-doctor"></i> কখন ডাক্তার দেখাবেন: বছরে ৩-৪ বারের বেশি হলে বা ঘরোয়া চিকিৎসায় উন্নতি না হলে।
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Vaginal Disease 2: Bacterial Vaginosis (BV) -->
+                <div class="disease-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col justify-between" data-keywords="ব্যাকটেরিয়াল ভ্যাজিনোসিস bacterial vaginosis BV মাছের মতো গন্ধ জলীয় স্রাব">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full border border-blue-200">ব্যাকটেরিয়াল ভারসাম্যহীনতা</span>
+                            <i class="fa-solid fa-bacteria text-blue-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">ব্যাকটেরিয়াল ভ্যাজিনোসিস (BV)</h3>
+                        <p class="text-xs text-teal-600 font-semibold mb-4">Bacterial Vaginosis (BV)</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>বিবরণ ও লক্ষণ:</strong> যোনি থেকে পাতলা, ধূসর বা সাদাটে স্রাব যাতে আঁশটে বা মাছের মতো তীব্র গন্ধ (Fishy odor) থাকে (বিশেষ করে সহবাসের পর)। চুলকানি হালকা হতে পারে।</p>
+                            <p><strong>কারণ:</strong> যোনির স্বাভাবিক ক্ষতিকর ও উপকারী ব্যাকটেরিয়ার ভারসাম্যের ব্যাঘাত ঘটা। ডাউচিং (Douching) বা সুগন্ধি সাবান ব্যবহার এর অন্যতম কারণ।</p>
+                            <p><strong>প্রতিরোধ ও চিকিৎসা:</strong> সুগন্ধি ক্ষারীয় সাবান এড়ানো। ডাউচ না করা। ডাক্তারের প্রেসক্রিপশনে মেট্রোনিডাজল (Metronidazole) অ্যান্টিবায়োটিক অত্যন্ত কার্যকরী।</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-teal-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                        <span class="text-xs font-bold text-teal-800 flex items-center gap-1">
+                            <i class="fa-solid fa-user-doctor"></i> কখন ডাক্তার দেখাবেন: গর্ভাবস্থায় এই লক্ষণ দেখা দিলে অবিলম্বে ডাক্তার দেখানো উচিত (অকাল প্রসবের ঝুঁকি থাকে)।
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Vaginal Disease 3: Trichomoniasis -->
+                <div class="disease-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col justify-between" data-keywords="ট্রাইকোমোনিয়াসিস trichomoniasis STI যোনি সংক্রমণ ফেনা যুক্ত স্রাব">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-rose-50 text-rose-700 text-xs font-bold rounded-full border border-rose-200">যৌন সংক্রামক (STI)</span>
+                            <i class="fa-solid fa-virus text-rose-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">ট্রাইকোমোনিয়াসিস</h3>
+                        <p class="text-xs text-teal-600 font-semibold mb-4">Trichomoniasis (Parasitic STI)</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>বিবরণ ও লক্ষণ:</strong> হলুদাভ-সবুজ ফেনা যুক্ত দুর্গন্ধযুক্ত স্রাব, যোনিতে লালচে ভাব, তীব্র চুলকানি এবং যৌনমিলনের সময় অস্বস্তি বা ব্যথা।</p>
+                            <p><strong>কারণ:</strong> <i>Trichomonas vaginalis</i> নামক একমোশি পরজীবী (Protozoa) যা অনিরাপদ যৌন সম্পর্কের মাধ্যমে ছড়ায়।</p>
+                            <p><strong>প্রতিরোধ ও চিকিৎসা:</strong> নিরাপদ যৌন আচরণ (কনডম ব্যবহার)। স্বামী এবং স্ত্রী উভয়কেই একসাথে অ্যান্টিপ্রোটোজোয়াল ওষুধ (Metronidazole) সেবন করতে হয়।</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-teal-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                        <span class="text-xs font-bold text-teal-800 flex items-center gap-1">
+                            <i class="fa-solid fa-user-doctor"></i> কখন ডাক্তার দেখাবেন: সবুজ বা ফেনাযুক্ত স্রাব ও তলপেটে অস্বস্তি দেখা দিলে।
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Vaginal Disease 4: Bartholin's Cyst/Abscess -->
+                <div class="disease-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col justify-between" data-keywords="বার্থোলিন সিস্ট bartholin cyst abscess যোনিদ্বারে ফোলা ব্যথা">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs font-bold rounded-full border border-amber-200">গ্রন্থির ফোঁড়া / সিস্ট</span>
+                            <i class="fa-solid fa-circle-dot text-amber-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">বার্থোলিন সিস্ট ও ফোঁড়া</h3>
+                        <p class="text-xs text-teal-600 font-semibold mb-4">Bartholin's Cyst & Abscess</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>বিবরণ ও লক্ষণ:</strong> যোনিদ্বারের যেকোনো একপাশে (Bartholin Gland) ব্যথাহীন বা অত্যন্ত ব্যথাদায়ক ফোলা চাকা। সংক্রামিত হলে (Abscess) হাঁটাচলা ও বসতে তীব্র ব্যথা হয়।</p>
+                            <p><strong>কারণ:</strong> যোনি পিচ্ছিল রাখার গ্রন্থির নালী বন্ধ হয়ে তরল জমে যাওয়া বা ব্যাকটেরিয়াল সংক্রমণ।</p>
+                            <p><strong>প্রতিরোধ ও চিকিৎসা:</strong> সিটজ বাথ (Sitz Bath - কুসুম গরম পানিতে বসে থাকা)। ফোঁড়া বড় হলে ডাক্তার ছোট অস্ত্রোপচারের মাধ্যমে ড্রেনেজ (Drainage) বা ক্যাথেটার বসিয়ে তরল বের করেন।</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-teal-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                        <span class="text-xs font-bold text-teal-800 flex items-center gap-1">
+                            <i class="fa-solid fa-user-doctor"></i> কখন ডাক্তার দেখাবেন: চাকাতে তীব্র ব্যথা, লালচে ভাব থাকলে বা হাঁটাচলা অসম্ভব হলে।
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Vaginal Disease 5: Pelvic Inflammatory Disease (PID) -->
+                <div class="disease-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col justify-between" data-keywords="পেলভিক ইনফ্ল্যামেটরি ডিজিজ PID pelvic inflammatory disease তলপেটে ব্যথা জরায়ু সংক্রমণ">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-red-50 text-red-700 text-xs font-bold rounded-full border border-red-200">প্রজননতন্ত্রের প্রদাহ</span>
+                            <i class="fa-solid fa-triangle-exclamation text-red-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">পেলভিক ইনফ্ল্যামেটরি ডিজিজ (PID)</h3>
+                        <p class="text-xs text-teal-600 font-semibold mb-4">Pelvic Inflammatory Disease (PID)</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>বিবরণ ও লক্ষণ:</strong> তলপেটে দীর্ঘস্থায়ী ব্যথা, জ্বর, সহবাসে অতিরিক্ত তীব্র ব্যথা, অনিয়মিত পিরিয়ড ও অস্বাভাবিক দুর্গন্ধযুক্ত স্রাব।</p>
+                            <p><strong>কারণ:</strong> যোনি থেকে ব্যাকটেরিয়া (যেমন ক্ল্যামিডিয়া বা গোনোরিয়া) উপরের দিকে ছড়িয়ে জরায়ু, ফেলোপিয়ান টিউব বা ডিম্বাশয়ে সংক্রমণ ঘটানো।</p>
+                            <p><strong>প্রতিরোধ ও চিকিৎসা:</strong> সময়মতো অ্যান্টিবায়োটিক চিকিৎসা না করালে বন্ধ্যাত্ব বা একটোপিক প্রেগন্যান্সির ঝুঁকি বাড়ে। দ্রুত ডাক্তারের পরামর্শে কম্বাইন্ড অ্যান্টিবায়োটিক নিতে হয়।</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-teal-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                        <span class="text-xs font-bold text-teal-800 flex items-center gap-1">
+                            <i class="fa-solid fa-user-doctor"></i> কখন ডাক্তার দেখাবেন: তলপেটে তীব্র ব্যথা ও জ্বরের সাথে বমি ভাব থাকলে অবিলম্বে জরুরি বিভাগে যান।
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Vaginal Disease 6: Vulvovaginitis -->
+                <div class="disease-card bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition flex flex-col justify-between" data-keywords="ভলভোভ্যাজিনাইটিস vulvovaginitis ভলভার প্রদাহ ক্ষারীয় সাবান অ্যালার্জি">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-3 py-1 bg-teal-50 text-teal-700 text-xs font-bold rounded-full border border-teal-200">ত্বক ও যোনিপ্রদাহ</span>
+                            <i class="fa-solid fa-notes-medical text-teal-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">ভলভোভ্যাজিনাইটিস</h3>
+                        <p class="text-xs text-teal-600 font-semibold mb-4">Vulvovaginitis (Vulvar & Vaginal Inflammation)</p>
+                        
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><strong>বিবরণ ও লক্ষণ:</strong> ভলভা (বাইরের অংশ) এবং যোনির টিস্যুতে জ্বালাপোড়া, লালচে ভাব, ফোলা ভাব এবং অস্বস্তি।</p>
+                            <p><strong>কারণ:</strong> অ্যালার্জিক প্রতিক্রিয়া (যেমন: সুগন্ধি প্যাড, কেমিক্যাল সাবান, টাইট কৃত্রিম অন্তর্বাস) বা ইস্ট্রোজেন হরমোনের ঘাটতি (মেনোপজের পর)।</p>
+                            <p><strong>প্রতিরোধ ও চিকিৎসা:</strong> মৃদু সুতি অন্তর্বাস ব্যবহার, কেমিক্যাল যুক্ত সুগন্ধি এড়ানো, হাইপוא্যালার্জেনিক ময়েশ্চারাইজার ও ইস্ট্রোজেন ক্রিম (প্রয়োজনে)।</p>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-gray-100 bg-teal-50/50 -mx-6 -mb-6 p-4 rounded-b-2xl">
+                        <span class="text-xs font-bold text-teal-800 flex items-center gap-1">
+                            <i class="fa-solid fa-user-doctor"></i> কখন ডাক্তার দেখাবেন: জ্বালা ও অস্বস্তি ১ সপ্তাহের বেশি স্থায়ী হলে।
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECTION 3: Prevention & General Hygiene Guidelines -->
+        <section id="prevention" class="scroll-mt-24">
+            <div class="bg-gradient-to-br from-rose-50 via-white to-teal-50 rounded-3xl p-8 border border-rose-100 shadow-sm">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="text-rose-600 font-bold text-xs uppercase tracking-wider bg-rose-100 px-3 py-1 rounded-full">স্বাস্থ্যাভ্যাস ও সুরক্ষা</span>
+                    <h2 class="text-3xl font-extrabold text-gray-900 mt-3">ইনফেকশন ও রোগ প্রতিরোধের স্বর্ণসূত্র</h2>
+                    <p class="text-gray-600 mt-2">দৈনন্দিন জীবনে সামান্য কিছু সচেতনতা আপনাকে রাখতে পারে সম্পূর্ণ সুরক্ষিত ও মুক্ত।</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-rose-300 transition text-center">
+                        <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fa-solid fa-soap"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">সঠিক পরিচ্ছন্নতা</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">যোনির ভেতরে কখনোই সাবান বা ডাউচ করবেন না। কেবল বাহিরের অংশ (Vulva) হালকা পানি দিয়ে পরিষ্কার করুন।</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-teal-300 transition text-center">
+                        <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">উপযুক্ত অন্তর্বাস</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">১০০% সুতি (Cotton) অন্তর্বাস ব্যবহার করুন। খুব টাইট পোশাক এড়িয়ে চলুন যেন পর্যাপ্ত বাতাস চলাচল করতে পারে।</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-rose-300 transition text-center">
+                        <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fa-solid fa-arrows-to-eye"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">সঠিক মোছার নিয়ম</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">টয়লেটের পর সবসময় <strong>সামনে থেকে পেছনে (Front to Back)</strong> মুছবেন, যেন মলদ্বারের ব্যাকটেরিয়া যোনিতে না আসে।</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:border-teal-300 transition text-center">
+                        <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-900 mb-2">পিরিয়ড হাইজিন</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">পিরিয়ডের সময় প্রতি ৪-৬ ঘণ্টা পর পর স্যাঁতসেঁতে প্যাড পরিবর্তন করুন। মেন্সট্রুয়াল কাপ নিয়মিত জীবাণুমুক্ত রাখুন।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Interactive FAQs -->
+        <section id="faq" class="scroll-mt-24">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-900">সাধারণ কিছু প্রশ্ন ও সমাধান (FAQ)</h2>
+                    <p class="text-gray-600 mt-1">নারী স্বাস্থ্য সংক্রান্ত বহুল জিজ্ঞাসিত প্রশ্নাবলির উত্তর</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-gray-800 flex items-center justify-between hover:bg-rose-50/50 transition">
+                            <span>প্রশ্ন: সাদা স্রাব (White Discharge) কি স্বাভাবিক? কখন এটি চিন্তার বিষয়?</span>
+                            <i class="fa-solid fa-chevron-down text-rose-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-gray-50/50 leading-relaxed">
+                            উত্তর: পরিমিত স্বচ্ছ বা হালকা সাদা দুর্গন্ধহীন স্রাব যোনি পরিষ্কার রাখার জন্য সম্পূর্ণ স্বাভাবিক। কিন্তু স্রাব যদি অতিরিক্ত ঘন ছানার মতো, হলুদাভ-সবুজ, দুর্গন্ধযুক্ত হয় বা সাথে তীব্র চুলকানি ও ব্যথা থাকে, তবে তা ইনফেকশনের লক্ষণ।
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-gray-800 flex items-center justify-between hover:bg-rose-50/50 transition">
+                            <span>প্রশ্ন: স্তনে চাকা (Lump) পাওয়া গেলেই কি তা স্তন ক্যান্সার?</span>
+                            <i class="fa-solid fa-chevron-down text-rose-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-gray-50/50 leading-relaxed">
+                            উত্তর: না! স্তনের প্রায় ৮০-৯০% চাকাই ক্যান্সার নয় (Non-cancerous/Benign)। এগুলো সাধারণত ফাইব্রোএডিনোমা, সিস্ট বা হরমোনজনিত সাধারণ গুটলি হতে পারে। তবে চাকা পাওয়া মাত্রই আল্ট্রাসাউন্ড বা ম্যামোগ্রাম করে নিশ্চিত হওয়া জরুরি।
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-gray-800 flex items-center justify-between hover:bg-rose-50/50 transition">
+                            <span>প্রশ্ন: যোনি পরিষ্কার করার জন্য কি বাজারে লিকুইড ওয়াশ (V-Wash) ব্যবহার করা উচিত?</span>
+                            <i class="fa-solid fa-chevron-down text-rose-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-gray-50/50 leading-relaxed">
+                            উত্তর: গাইনেকোলজিস্টদের মতে, যোনির ভেতরের অংশ (Vagina) নিজেকে নিজেই পরিষ্কার রাখতে সক্ষম (Self-cleaning)। কেমিক্যালযুক্ত কোনো লিকুইড ওয়াশ ব্যবহার করলে উপকারী ল্যাকটোব্যাসিলাস ব্যাকটেরিয়া ধ্বংস হতে পারে। কেবল ইষদুষ্ণ পরিষ্কার পানিই বহিরাঙ্গনের জন্য যথেষ্ট।
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                        <button onclick="toggleFaq(this)" class="w-full p-5 text-left font-bold text-gray-800 flex items-center justify-between hover:bg-rose-50/50 transition">
+                            <span>প্রশ্ন: কত বছর বয়স থেকে নারীদের ম্যামোগ্রাম করা উচিত?</span>
+                            <i class="fa-solid fa-chevron-down text-rose-500 transition-transform"></i>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 text-sm text-gray-600 border-t border-gray-100 bg-gray-50/50 leading-relaxed">
+                            উত্তর: সাধারণ ঝুঁকিতে থাকা নারীদের ৪০ বছর বয়স থেকে প্রতি ১-২ বছর পর পর ম্যামোগ্রাম স্ক্রিনিং করানো উচিত। তবে পরিবারে স্তন ক্যান্সারের ইতিহাস থাকলে আরও কম বয়সে চিকিৎসকের পরামর্শে স্ক্রিনিং শুরু করতে হবে।
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Interactive BSE Checklist Modal -->
+    <div id="checklist-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="toggleChecklistModal()" class="absolute top-5 right-5 text-gray-400 hover:text-gray-700 text-xl w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-full flex items-center justify-center text-xl mx-auto mb-2">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900">মাসিক স্ব-পরীক্ষা চেকঅফ তালিকা</h3>
+                <p class="text-xs text-gray-500">আপনার আজকের পরীক্ষার তথ্য মিলিয়ে নিন</p>
+            </div>
+
+            <div class="space-y-3 text-sm text-gray-700">
+                <label class="flex items-start gap-3 p-3 bg-gray-50 rounded-xl cursor-pointer hover:bg-rose-50/50 transition">
+                    <input type="checkbox" class="mt-1 rounded text-rose-600 focus:ring-rose-500 w-4 h-4">
+                    <span>স্তনের ত্বকে কোনো পরিবর্তন, লালচে ভাব বা গর্ত (Dimpling) নেই।</span>
+                </label>
+                <label class="flex items-start gap-3 p-3 bg-gray-50 rounded-xl cursor-pointer hover:bg-rose-50/50 transition">
+                    <input type="checkbox" class="mt-1 rounded text-rose-600 focus:ring-rose-500 w-4 h-4">
+                    <span>স্তনে বা বগলে কোনো নতুন শক্ত চাকা (Lump) অনুভূত হয়নি।</span>
+                </label>
+                <label class="flex items-start gap-3 p-3 bg-gray-50 rounded-xl cursor-pointer hover:bg-rose-50/50 transition">
+                    <input type="checkbox" class="mt-1 rounded text-rose-600 focus:ring-rose-500 w-4 h-4">
+                    <span>নিপল ভেতরের দিকে ডেবে যায়নি বা আকার বিকৃত হয়নি।</span>
+                </label>
+                <label class="flex items-start gap-3 p-3 bg-gray-50 rounded-xl cursor-pointer hover:bg-rose-50/50 transition">
+                    <input type="checkbox" class="mt-1 rounded text-rose-600 focus:ring-rose-500 w-4 h-4">
+                    <span>নিপল হালকা চাপলে কোনো রক্ত বা অস্বাভাবিক তরল বের হয়নি।</span>
+                </label>
+            </div>
+
+            <div class="mt-6 p-4 bg-teal-50 rounded-2xl border border-teal-100 text-xs text-teal-800">
+                <strong>নোট:</strong> যদি কোনো চেকে অমিল পান বা কোনো পরিবর্তন আপনার চোখে পড়ে, আতঙ্কিত না হয়ে একজন স্ত্রীরোগ বিশেষজ্ঞ (Gynecologist) বা সার্জনের পরামর্শ নিন।
+            </div>
+
+            <button onclick="toggleChecklistModal()" class="w-full mt-6 bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 rounded-xl transition">
+                সম্পন্ন হয়েছে
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 text-white font-bold text-xl mb-3">
+                        <i class="fa-solid fa-ribbon text-rose-500"></i> নারী স্বাস্থ্য নির্দেশিকা
+                    </div>
+                    <p class="text-xs leading-relaxed text-gray-400">
+                        আমাদের লক্ষ্য প্রতিটি নারীকে স্তন ও যোনির বিভিন্ন রোগ, সংক্রামক ব্যাধি ও প্রতিকার সম্পর্কে সঠিক এবং বৈজ্ঞানিক তথ্য দিয়ে সচেতন করে তোলা।
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-3">দ্রুত লিঙ্ক</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#breast-health" class="hover:text-rose-400 transition">স্তনের রোগ ও টিউমার</a></li>
+                        <li><a href="#vaginal-health" class="hover:text-teal-400 transition">যোনি ও ভলভার সংক্রমণ</a></li>
+                        <li><a href="#bse-guide" class="hover:text-rose-400 transition">স্তন স্ব-পরীক্ষা পদ্ধতি</a></li>
+                        <li><a href="#prevention" class="hover:text-teal-400 transition">স্বাস্থ্য সুরক্ষা নিয়মাবলি</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-3">মেডিকেল সতর্কতা</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        এই তথ্যগুলো কোনো বাণিজ্যিক প্রচারণা নয়। যেকোনো শারীরিক অসুস্থতায় নিজস্ব সিদ্ধান্ত বা ঘরোয়া চিকিৎসার উপর ভরসা না করে দ্রুত অভিজ্ঞ গাইনোকোলজিস্ট ডাক্তার দেখান।
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+                &copy; ২০২৬ নারী স্বাস্থ্য ও সচেতনতা নির্দেশিকা | সর্বস্বত্ব সংরক্ষিত।
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Search Filter Logic for Diseases
+        const searchInput = document.getElementById('disease-search');
+        const diseaseCards = document.querySelectorAll('.disease-card');
+
+        function filterDiseases() {
+            const query = searchInput.value.toLowerCase().trim();
+
+            diseaseCards.forEach(card => {
+                const keywords = card.getAttribute('data-keywords').toLowerCase();
+                const content = card.innerText.toLowerCase();
+
+                if (keywords.includes(query) || content.includes(query)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        searchInput.addEventListener('input', filterDiseases);
+
+        function filterSearch(term) {
+            searchInput.value = term;
+            filterDiseases();
+            document.getElementById('breast-health').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Toggle FAQ Accordion
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('i');
+
+            if (answer.classList.contains('hidden')) {
+                answer.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                answer.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Toggle Checklist Modal
+        function toggleChecklistModal() {
+            const modal = document.getElementById('checklist-modal');
+            modal.classList.toggle('hidden');
+            document.body.classList.toggle('modal-active');
+        }
+    </script>
+</body>
+</html>
